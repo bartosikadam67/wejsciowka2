@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 # Podsumowanie statystyczne
 
 mtcars
-structure(mtcars)
+str(mtcars)
 nrow(mtcars)
 summary(mtcars)
 
