@@ -28,6 +28,11 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Podsumowanie statystyczne
 
+mtcars
+structure(mtcars)
+nrow(mtcars)
+summary(mtcars)
+
 ```
 
 
@@ -52,6 +57,31 @@ library(dplyr)
 
 
 # Które samochody mają najlepsze i najgorsze zużycie paliwa?
+
+mtcars %>% 
+  group_by(cyl) %>% 
+  count(cyl)
+
+mtcars %>%
+  filter(cyl==8)
+  
+mtcars %>%
+  filter(cyl==8)
+
+mtcars %>%
+  filter(cyl==8) %>% 
+  count(cyl)
+
+mtcars %>%
+  filter(hp>200) %>% 
+   arrange(desc(mpg))
+
+mtcars %>% 
+  group_by(cyl) %>% 
+  summarise(srednia_moc=mean(hp))
+
+mtcars %>%
+   arrange(desc(mpg))
 ```
 
 ### 3. Wizualizacja danych
@@ -61,8 +91,12 @@ library(ggplot2)
 
 # Wykres zużycia paliwa w zależności od liczby cylindrów (boxplot)
 
+ggplot(mtcars, aes(x = mpg, y = cyl, fill = cyl)) + 
+  geom_boxplot()
 
 # Scatter plot: moc vs zużycie paliwa
+ggplot(mtcars, aes(x = mpg, y = hp)) + 
+  geom_point()
 
 ```
 
