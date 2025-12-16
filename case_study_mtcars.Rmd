@@ -1,0 +1,71 @@
+---
+title: "Case Study: Analiza danych o samochodach"
+author: "Imię Nazwisko studenta"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Zadania do wykonania
+
+### 1. Wczytanie i podstawowa eksploracja danych
+
+```{r load_data}
+# Wczytaj dane mtcars (są już dostępne w bazowym R)
+
+
+# Wyświetl pierwsze 6 wierszy
+
+
+# Sprawdź strukturę danych
+
+
+# Ile jest wierszy w zbiorze danych?
+
+
+# Podsumowanie statystyczne
+
+```
+
+
+### 2. Analiza z pakietem dplyr
+
+```{r dplyr_analysis}
+library(dplyr)
+
+# Policz ile samochodów ma daną liczbę cylindrów
+
+
+# Stwórz podzbiór danych - tylko samochody z silnikiem V8 (8 cylindrów)
+
+
+# Ile jest samochodów z silnikiem V8?
+
+
+# Filtrowanie  aut hp> 200 i sortowanie malejąco wg mpg
+
+
+# Jaka jest średnia moc samochodu dla każdej liczby cylindrów?
+
+
+# Które samochody mają najlepsze i najgorsze zużycie paliwa?
+```
+
+### 3. Wizualizacja danych
+
+```{r visualization}
+library(ggplot2)
+
+# Wykres zużycia paliwa w zależności od liczby cylindrów (boxplot)
+
+
+# Scatter plot: moc vs zużycie paliwa
+
+```
+
+
+
+
